@@ -29,3 +29,24 @@ Further a standard Logistic regression model is trained on this dataset for the 
 Our project, lead us to explore another area of comparison between BERT Model and Vanilla Logistic Regression when applied on different languages.
 As when we applied BERT Model on Hindi dataset we got a very low point of accuracy while if we apply the same model on a standard English dataset, we got a high pointer of accuracy. Similarly, Logistic regression when directly applied on English lannguage gave a good accuracy as compared to Hindi dataset(tfidf vectorization). 
 Although, BERT Model is recommended to use in such situations of Fake news classification as it can predict better as it understands the sequence of sentence better than the Logistic reression approach. But our model, invalidates this theory for languages other than English. 
+
+---
+### Dataset Explanation 
+>Contents of Data : Approach 1
+
+* `fake_news.json` and `valid_news.json` contains the raw Hindi dataset in json format with full detail (url, short_description, long_description, full_title). 
+* `fake_news.csv` and `true_news.csv` contains the cleaned dataset that is to be used for model training. It contains the final description of the news and its id.
+* `Hindi_stopwords.txt` This text file contains the stop words of hindi language. 
+* `Final_dataset.csv` This file is the combination of `fake_news.csv` and `true_news.csv` with their labels. 
+
+>Contents of Data : Approach 2
+
+* `fake_news.json` and `valid_news.json` contains the raw Hindi dataset in json format with full detail (url, short_description, long_description, full_title).
+* `fake_news_raw.csv` and `true_news_raw.csv` These files are just csv format of same json file above.
+* `fake_news.csv` and `true_news.csv` contains the cleaned dataset that is to be used for model training. It contains the final description of the news and its id.
+* `fake_news.txt` and `true_news.txt` contains the text versions of clean hindi dataset. 
+* `Translated_fake_news.txt` and `Translated_true_news.txt` contains translated dataset to hindi language.
+* `clean_fake_news.txt` and `clean_true_news.txt` contains the pre-processed English dataset, these are the final datasets for model training and processing. 
+* `Final_dataset.csv` This file is the combination of `clean_fake_news.csv` and `clean_true_news.csv` with their labels. 
+
+
